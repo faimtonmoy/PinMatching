@@ -33,3 +33,21 @@ document.getElementById('key-pad').addEventListener('click', function(event){
     }
     
 });
+function verifyPin()
+{
+    const generatedPin=  document.getElementById('display-pin').value;
+    const typedPin= document.getElementById('number-view').value;
+    const successSign= document.getElementById('notify-success');
+    const failSign= document.getElementById('notify-fail');
+    if(generatedPin== typedPin)
+    {
+        
+        successSign.style.display= 'block';
+        failSign.style.display= 'none';
+    }
+    else
+    {
+        successSign.style.display= 'none';
+        failSign.style.display= 'block';
+    }
+}
